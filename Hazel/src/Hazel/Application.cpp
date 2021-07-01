@@ -4,6 +4,8 @@
 #include "Hazel/Events/ApplicationEvent.h"
 #include "Hazel/log.h"
 
+#include"GLFW/glfw3.h"
+
 namespace Hazel {
 
 	Application::Application()
@@ -18,6 +20,8 @@ namespace Hazel {
 	{
 		while (m_Running)
 		{
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
 			m_Window->Onupdate();
 		}
 	}
